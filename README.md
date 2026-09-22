@@ -259,10 +259,29 @@ interacting attributes), never in which categories of information appear.
 "Sharing policy" / "External-collaborator policy" and "Confidential-file
 policy" / "File eligibility" were also unified to plain "Policy" / "Exception"
 so the same label means the same thing in both ambiguity levels. Policies are
-not given their own names (e.g. no "(External-Collaborator)" prefix) — the
-Exception row refers back to "the sharing policy" generically, since only one
-Policy row is ever shown above it in the same panel and a name isn't needed
-to disambiguate which policy is meant.
+not given their own names (e.g. no "(External-Collaborator)" prefix) — a name
+isn't needed since only one Policy row is ever shown above the Exception row
+in the same panel.
+
+**Policy is the restriction; Exception is what permits sharing anyway** — not
+the other way around. At high ambiguity, the Policy row states a blanket
+restriction ("External collaborators may not access project files") that is
+byte-for-byte identical across 100/110/101/111; the Exception row states a
+carve-out ("Members with an active nondisclosure agreement may access
+Internal files as an exception to this policy") that is *also* identical
+across all four. Nothing in either row varies with `share` — the only thing
+that varies is the already-existing Classification row (Confidential vs.
+Internal), which the participant must check against the Exception's
+"Internal files" condition to work out whether the carve-out actually covers
+this file. This replaced an earlier version where the Exception text itself
+changed per file ("...excluded from..." vs "...eligible for...") — which
+came from a Policy that was already permissive ("External collaborators may
+access project files when...") with the Exception describing an exclusion
+*from* that permission. That framing made the can-share Exception
+nonsensical: saying an Internal file is "eligible for" a policy it was
+already unconditionally covered by isn't really an exception to anything.
+The current framing fixes that — the default is a prohibition, and the
+Exception is a genuine carve-out that only sometimes fires.
 
 ## 8. How experimental equivalence is preserved
 
@@ -312,13 +331,15 @@ to disambiguate which policy is meant.
 The scenario materials explicitly flag that word-count matching between the
 fact list and the narrative should be validated empirically before fielding
 (Section G.5 of the brief), and that ambiguity should be pretested rather than
-assumed. Tightening the narrative to drop *redundant* "Project Atlas" mentions
-(each narrative still names the project exactly once, matching the fact
-list's single `Project: Project Atlas` row) and the unmirrored
-pricing-content clause (see §9's proposition audit below) made the narrative
-noticeably shorter than the fact list at both ambiguity levels (facts: 29–44
-words; narrative: 25–39 words) — the two representations are no longer close
-to word-count parity. No filler was added to force a
+assumed. Several rounds of wording fixes (dropping *redundant* "Project
+Atlas" mentions — each narrative still names the project exactly once,
+matching the fact list's single `Project: Project Atlas` row — removing the
+unmirrored pricing-content clause, and restructuring the high-ambiguity
+Policy/Exception logic) have left the two representations at similar but not
+matched lengths: 29–43 words for the low-ambiguity pair, 43 (facts) vs. 44–47
+(narrative) for the high-ambiguity pair — narrative is now slightly *longer*
+than facts at high ambiguity, the reverse of where this stood earlier. No
+filler was added to force a
 length match, per the brief's explicit instruction against padding either
 side; if a pretest indicates length is confounding perceived ambiguity or
 difficulty, tighten or expand the wording in the `scenarios` object in
@@ -357,16 +378,17 @@ awkwardly for a scenario where those concepts are simply irrelevant.
 
 Only the high-ambiguity Cannot-share narrative (110) keeps an explicit
 "However," — because that scenario has a genuine logical contrast: the
-membership + NDA facts would normally *permit* access, but the file's
-Confidential classification is an exception that reverses that. The other
-three narratives (010, 011, 111) join their two facts with a plain "and" /
-two short sentences instead, because in those cases the facts reinforce each
-other rather than conflict (not-a-member + members-only-policy; member +
-members-may-share; member+NDA + internal-file-is-eligible) — a "However"
-there would signal a contrast that isn't actually present in the underlying
-facts. In every narrative, the fact list (which never uses connectives, just
-a flat labeled list) presents the identical facts with no relationship
-between them made explicit; the narrative's job is to state that
+membership + NDA facts would normally qualify Jordan Lee for the exception
+that permits access to Internal files, but the file's Confidential
+classification means that exception doesn't cover it, so the general
+restriction stands. The other three narratives (010, 011, 111) join their
+facts with a plain "and" / a second short sentence instead, because in those
+cases the facts point the same direction throughout — there's no point where
+a fact that would normally help gets blocked by another fact. A "However"
+there would signal a contrast that isn't actually present. In every
+narrative, the fact list (which never uses connectives, just a flat labeled
+list) presents the identical facts with no relationship between them made
+explicit; the narrative's job is to state that
 relationship in prose, using "However" only where the facts actually
 disagree and "and"/two sentences where they agree.
 

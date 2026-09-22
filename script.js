@@ -160,11 +160,11 @@
         ["Recipient status", "External collaborator"],
         ["Project membership", "Member"],
         ["Nondisclosure agreement", "Active"],
-        ["Policy", "External collaborators may access project files when they are members and have an active nondisclosure agreement"],
-        ["Exception", "Confidential files are excluded from the sharing policy"]
+        ["Policy", "External collaborators may not access project files"],
+        ["Exception", "Members with an active nondisclosure agreement may access Internal files as an exception to this policy"]
       ],
       warrantText:
-        "Jordan Lee is an external collaborator and a member of Project Atlas with an active nondisclosure agreement, which would normally allow access to project files. However, this file is marked Confidential, and confidential files are excluded from that policy.",
+        "Jordan Lee is an external collaborator, and external collaborators may not access project files unless they are a member of Project Atlas with an active nondisclosure agreement, in which case Internal files are an exception. However, this file is marked Confidential, so the exception does not apply.",
       claim: "Do not share this file with Jordan Lee."
     },
     "110": {
@@ -179,11 +179,11 @@
         ["Recipient status", "External collaborator"],
         ["Project membership", "Member"],
         ["Nondisclosure agreement", "Active"],
-        ["Policy", "External collaborators may access project files when they are members and have an active nondisclosure agreement"],
-        ["Exception", "Confidential files are excluded from the sharing policy"]
+        ["Policy", "External collaborators may not access project files"],
+        ["Exception", "Members with an active nondisclosure agreement may access Internal files as an exception to this policy"]
       ],
       warrantText:
-        "Jordan Lee is an external collaborator and a member of Project Atlas with an active nondisclosure agreement, which would normally allow access to project files. However, this file is marked Confidential, and confidential files are excluded from that policy.",
+        "Jordan Lee is an external collaborator, and external collaborators may not access project files unless they are a member of Project Atlas with an active nondisclosure agreement, in which case Internal files are an exception. However, this file is marked Confidential, so the exception does not apply.",
       claim: "Do not share this file with Jordan Lee."
     },
 
@@ -200,11 +200,11 @@
         ["Recipient status", "External collaborator"],
         ["Project membership", "Member"],
         ["Nondisclosure agreement", "Active"],
-        ["Policy", "External collaborators may access project files when they are members and have an active nondisclosure agreement"],
-        ["Exception", "Internal files are eligible for the sharing policy"]
+        ["Policy", "External collaborators may not access project files"],
+        ["Exception", "Members with an active nondisclosure agreement may access Internal files as an exception to this policy"]
       ],
       warrantText:
-        "Jordan Lee is an external collaborator and a member of Project Atlas with an active nondisclosure agreement, which satisfies the requirements for the sharing policy. This file is marked Internal and is eligible for that policy.",
+        "Jordan Lee is an external collaborator, and external collaborators may not access project files unless they are a member of Project Atlas with an active nondisclosure agreement, in which case Internal files are an exception. This file is marked Internal, so the exception applies.",
       claim: "Share this file with Jordan Lee."
     },
     "111": {
@@ -219,11 +219,11 @@
         ["Recipient status", "External collaborator"],
         ["Project membership", "Member"],
         ["Nondisclosure agreement", "Active"],
-        ["Policy", "External collaborators may access project files when they are members and have an active nondisclosure agreement"],
-        ["Exception", "Internal files are eligible for the sharing policy"]
+        ["Policy", "External collaborators may not access project files"],
+        ["Exception", "Members with an active nondisclosure agreement may access Internal files as an exception to this policy"]
       ],
       warrantText:
-        "Jordan Lee is an external collaborator and a member of Project Atlas with an active nondisclosure agreement, which satisfies the requirements for the sharing policy. This file is marked Internal and is eligible for that policy.",
+        "Jordan Lee is an external collaborator, and external collaborators may not access project files unless they are a member of Project Atlas with an active nondisclosure agreement, in which case Internal files are an exception. This file is marked Internal, so the exception applies.",
       claim: "Share this file with Jordan Lee."
     }
   };
