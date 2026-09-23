@@ -142,12 +142,16 @@ button{font-family:inherit;}
 .file-list{padding:0 20px;}
 .file-row{
   display:grid;
-  grid-template-columns:1fr 140px 160px;
+  /* Name always gets whatever space is left; Modified/By size to their own
+     (short) text instead of claiming fixed pixels the name column can't
+     reclaim on the narrower widths a Qualtrics-embedded iframe hands us. */
+  grid-template-columns:minmax(0,1fr) auto auto;
   align-items:center;
   padding:9px 8px;
   border-bottom:1px solid #f0f0f0;
-  column-gap:8px;
+  column-gap:20px;
 }
+.col-modified,.col-by{white-space:nowrap;}
 .file-row.header-row{
   color:var(--text-secondary);font-size:12.5px;font-weight:600;
   border-bottom:1px solid var(--border-strong);
@@ -344,7 +348,6 @@ button{font-family:inherit;}
   .teams-sidebar{display:none;}
   .teams-shell{grid-template-columns:60px 1fr;}
   .fact-label{min-width:120px;}
-  .file-row{grid-template-columns:1fr 100px 120px;}
   .breadcrumb{font-size:16px;}
   .crumb-current{font-size:14px;}
 }
@@ -354,7 +357,6 @@ button{font-family:inherit;}
   .rail-btn{width:48px;height:44px;font-size:0;}
   .rail-btn span{display:none;}
   .rail-btn svg{width:19px;height:19px;}
-  .file-row{grid-template-columns:1fr 90px;}
   .col-by{display:none;}
   .files-toolbar{padding:12px 14px 8px;}
   .file-list{padding:0 14px;}
@@ -364,7 +366,7 @@ button{font-family:inherit;}
   .debug-panel{width:auto;max-width:calc(100vw - 24px);}
 }
 @media (max-width:400px){
-  .file-row{grid-template-columns:1fr;row-gap:2px;}
+  .file-row{grid-template-columns:minmax(0,1fr);row-gap:2px;}
   .col-modified,.col-by{display:none;}
   .file-name{white-space:normal;}
   .breadcrumb{font-size:14px;}
