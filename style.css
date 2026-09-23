@@ -282,7 +282,7 @@ button{font-family:inherit;}
 .fact-value{font-weight:600;color:var(--text-primary);}
 
 .warrant-text{
-  margin:0;color:var(--text-primary);
+  margin:0;color:var(--text-primary);font-weight:600;
 }
 
 /* ---------------- Footer ---------------- */
