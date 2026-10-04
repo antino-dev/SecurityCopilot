@@ -113,7 +113,7 @@
       ],
       warrantText:
         "The file may be shared with Project Atlas members. Jordan Lee is a Project Atlas member.",
-      claim: "Share this file with Jordan Lee."
+      claim: "You may share the file with Jordan Lee."
     },
     "011": {
       fileName: "Project Atlas – Q3 Pricing.xlsx",
@@ -128,7 +128,7 @@
       ],
       warrantText:
         "The file may be shared with Project Atlas members. Jordan Lee is a Project Atlas member.",
-      claim: "Share this file with Jordan Lee."
+      claim: "You may share the file with Jordan Lee."
     },
 
     // ---- HIGH AMBIGUITY, CANNOT SHARE (Scenario 5 / 7) ---------------
@@ -189,7 +189,7 @@
       ],
       warrantText:
         "Project Atlas files may not be accessed by external collaborators, except that members with an active nondisclosure agreement may access Internal files. Jordan Lee is an external collaborator, but is a Project Atlas member, has an active nondisclosure agreement, and the file is marked Internal.",
-      claim: "Share this file with Jordan Lee."
+      claim: "You may share the file with Jordan Lee."
     },
     "111": {
       fileName: "Project Atlas – Q3 Pricing.xlsx",
@@ -208,7 +208,7 @@
       ],
       warrantText:
         "Project Atlas files may not be accessed by external collaborators, except that members with an active nondisclosure agreement may access Internal files. Jordan Lee is an external collaborator, but is a Project Atlas member, has an active nondisclosure agreement, and the file is marked Internal.",
-      claim: "Share this file with Jordan Lee."
+      claim: "You may share the file with Jordan Lee."
     }
   };
 
