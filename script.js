@@ -288,20 +288,9 @@
   function buildSecurityPanelContent() {
     el.securityPanelBody.innerHTML = "";
 
-    // Every treatment level shows the claim — treatment only controls how
-    // much supporting material accompanies it.
-    const claimRow = document.createElement("div");
-    claimRow.className = "claim-row";
-    const claimLabel = document.createElement("div");
-    claimLabel.className = "claim-label";
-    claimLabel.textContent = "Recommendation";
-    const claimValue = document.createElement("p");
-    claimValue.className = "claim-text";
-    claimValue.textContent = scenario.claim;
-    claimRow.appendChild(claimLabel);
-    claimRow.appendChild(claimValue);
-    el.securityPanelBody.appendChild(claimRow);
-
+    // Build-up order: Details, then Why, then the Recommendation (claim)
+    // last — participants see the evidence and reasoning before the
+    // directive, instead of the directive first.
     if (treatment === "1" || treatment === "2") {
       addSectionLabel("Details");
       const list = document.createElement("ul");
@@ -328,6 +317,14 @@
       p.textContent = scenario.warrantText;
       el.securityPanelBody.appendChild(p);
     }
+
+    // Every treatment level shows the claim — treatment only controls how
+    // much supporting material precedes it.
+    addSectionLabel("Recommendation");
+    const claimValue = document.createElement("p");
+    claimValue.className = "claim-text";
+    claimValue.textContent = scenario.claim;
+    el.securityPanelBody.appendChild(claimValue);
   }
 
   /* =======================================================================
