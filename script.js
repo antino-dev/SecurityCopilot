@@ -71,14 +71,10 @@
   // One case per ambiguity+share combination, keyed "<ambiguity><share>".
   // Low-ambiguity cases turn on project membership alone (no classification
   // involved). High-ambiguity cases turn on the Confidential/Internal
-  // distinction interacting with the NDA exception — participants have
-  // struggled to tell Confidential and Internal apart, so each value now
-  // carries a short, generic sensitivity clarification (which is more
-  // restrictive than which) without hinting at how this policy's exception
-  // actually resolves.
+  // distinction interacting with the NDA exception.
   const CLASSIFICATION = {
-    internal: "Internal (lower sensitivity — standard company use)",
-    confidential: "Confidential (higher sensitivity — more restricted than Internal)"
+    internal: "Internal",
+    confidential: "Confidential"
   };
 
   const caseData = {
